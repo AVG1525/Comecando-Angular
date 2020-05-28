@@ -15,9 +15,9 @@ export class AppComponent {
   // any[] = []; => []
   // any[];      => undefined
   // any é qualquer coisa / public nome_variavel: tipo_variavel
-
+  public mode = 'list';
   public todos: Todo[] = [];
-  public title: String = 'Minhas Tarefas';
+  public title = 'Minhas Tarefas';
   public form: FormGroup;
 
   constructor(private fb: FormBuilder) {    
@@ -76,4 +76,7 @@ export class AppComponent {
     else this.todos = [];
   }
 
+  changeMode(mode:string){
+    this.mode = mode;
+  }
 }
