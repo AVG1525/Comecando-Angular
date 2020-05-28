@@ -9,11 +9,13 @@
 <form [attr.FormGroup]="form">
   <fieldset>
     <label>Tarefa: </label>
+    
     <input 
       type="text" 
       placeholder="Título da tarefa" 
       maxlength="60" 
       formControlName="title">
-    <button>Salvar</button>
+      <small>Este campo deve conter entre 3 a 60 caracteres</small>
+      <button>Salvar</button>
   </fieldset>
 </form>
